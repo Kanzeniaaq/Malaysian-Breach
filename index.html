@@ -5,110 +5,203 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Malaysia Breach Claims Tracker</title>
 <style>
-  :root { --bg:#ffffff; --fg:#1b1f24; --muted:#5b6672; --line:#dde2e8; --warn:#fff4d6; --warn-line:#e8c766; --chip:#eef1f5; }
+  :root { --bg:#ffffff; --fg:#1b1f24; --muted:#5b6672; --line:#dde2e8; --warn:#fff4d6; --warn-line:#e8c766; --chip:#eef1f5; --accent:#2457d6; --nav:#f6f8fa; }
   @media (prefers-color-scheme: dark) {
-    :root { --bg:#14181d; --fg:#e6e9ed; --muted:#9aa5b1; --line:#2a313a; --warn:#3a3220; --warn-line:#7a6428; --chip:#232a33; }
+    :root { --bg:#14181d; --fg:#e6e9ed; --muted:#9aa5b1; --line:#2a313a; --warn:#3a3220; --warn-line:#7a6428; --chip:#232a33; --accent:#7aa2ff; --nav:#1b2027; }
   }
+  * { box-sizing: border-box; }
   body { font-family: system-ui, sans-serif; background:var(--bg); color:var(--fg); margin:0; line-height:1.5; }
-  main { max-width: 900px; margin: 0 auto; padding: 24px 16px 48px; }
-  h1 { margin: 0 0 4px; font-size: 1.6rem; }
-  h2 { margin: 36px 0 2px; font-size: 1.25rem; }
-  .sub { color:var(--muted); margin:0 0 8px; }
+  a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:underline; }
+  header.nav { position:sticky; top:0; background:var(--nav); border-bottom:1px solid var(--line); z-index:5; }
+  .nav-in { max-width:1000px; margin:0 auto; padding:10px 16px; display:flex; flex-wrap:wrap; gap:8px 24px; align-items:center; }
+  .brand { font-weight:700; color:var(--fg); }
+  nav { display:flex; gap:4px; flex-wrap:wrap; }
+  nav a { color:var(--fg); padding:6px 12px; border-radius:8px; }
+  nav a.on { background:var(--chip); font-weight:600; }
+  main { max-width:1000px; margin:0 auto; padding:16px 16px 40px; }
+  h1 { margin:8px 0 4px; font-size:1.6rem; } h2 { margin:28px 0 4px; font-size:1.2rem; }
+  .sub { color:var(--muted); margin:0 0 12px; }
   .count { display:inline-block; background:var(--chip); border-radius:999px; padding:1px 10px; font-size:.85rem; margin-left:8px; font-weight:500; }
-  .warn { background:var(--warn); border:1px solid var(--warn-line); border-radius:8px; padding:12px 14px; margin:16px 0; font-size:.95rem; }
-  input { width:100%; box-sizing:border-box; padding:10px; border:1px solid var(--line); border-radius:8px; background:var(--bg); color:var(--fg); font-size:1rem; }
-  .wrap { overflow-x:auto; margin-top:8px; }
+  .warn { background:var(--warn); border:1px solid var(--warn-line); border-radius:8px; padding:10px 14px; font-size:.9rem; max-width:1000px; margin:12px auto 0; }
+  .wrapw { padding:0 16px; }
+  .filters { display:flex; gap:8px; flex-wrap:wrap; margin:8px 0; }
+  input, select { padding:10px; border:1px solid var(--line); border-radius:8px; background:var(--bg); color:var(--fg); font-size:1rem; }
+  input { flex:1; min-width:200px; }
+  .wrap { overflow-x:auto; }
   table { width:100%; border-collapse:collapse; font-size:.95rem; }
   th, td { text-align:left; padding:10px 8px; border-bottom:1px solid var(--line); vertical-align:top; }
   th { color:var(--muted); font-weight:600; }
+  table.kv { margin:4px 0; } table.kv th { width:30%; font-weight:600; color:var(--muted); }
+  .item { padding:2px 0; }
+  .stats { display:flex; gap:12px; flex-wrap:wrap; margin:12px 0; }
+  .stat { background:var(--chip); border-radius:10px; padding:12px 18px; } .stat b { display:block; font-size:1.6rem; } .stat span { color:var(--muted); }
+  .chip { display:inline-block; background:var(--chip); border-radius:999px; padding:2px 10px; font-size:.85rem; }
+  .btn { margin:14px 0; padding:9px 16px; border:1px solid var(--line); border-radius:8px; background:var(--chip); color:var(--fg); font-size:1rem; cursor:pointer; }
   .empty { color:var(--muted); padding:12px 0; }
-  footer { color:var(--muted); font-size:.85rem; margin-top:40px; }
-  a { color:inherit; }
+  footer { max-width:1000px; margin:0 auto; padding:0 16px 40px; color:var(--muted); font-size:.85rem; }
 </style>
 </head>
 <body>
-<main>
-  <h1>Malaysia Breach Claims Tracker</h1>
-  <p class="sub" id="updated">Loading…</p>
-
-  <div class="warn">
-    <strong>Unverified claims.</strong> Entries below are claims made by threat actors on underground
-    forums or ransomware leak sites. They have not been verified and may be false, exaggerated, or outdated.
-    Listing here does not mean an organization was breached. This site hosts no leaked data. tuu diaa bak hang
-  </div>
-
-  <input id="q" type="search" placeholder="Filter by organization, group, or data…">
-
-  <h2>DarkForums <span class="count" id="forum-count">0</span></h2>
-  <p class="sub">Claims posted on an underground forum.</p>
-  <div class="wrap">
-    <table>
-      <thead>
-        <tr><th>First seen</th><th>Organization</th><th>Claim type</th><th>Claimed data</th><th>Claimed records</th></tr>
-      </thead>
-      <tbody id="forum-rows"></tbody>
-    </table>
-    <div class="empty" id="forum-empty" hidden>No entries.</div>
-  </div>
-
-  <h2>Ransomware <span class="count" id="ransom-count">0</span></h2>
-  <p class="sub">Victims listed on ransomware group leak sites.</p>
-  <div class="wrap">
-    <table>
-      <thead>
-        <tr><th>First seen</th><th>Organization</th><th>Group</th><th>Claimed data</th><th>Claimed size</th></tr>
-      </thead>
-      <tbody id="ransom-rows"></tbody>
-    </table>
-    <div class="empty" id="ransom-empty" hidden>No entries.</div>
-  </div>
-
-  <footer>
-    Ransomware listing data via <a href="https://www.ransomware.live/">ransomware.live</a>.
-    Organizations that want an entry corrected or removed: contact your-contact-email@example.com.
-  </footer>
-</main>
+<header class="nav"><div class="nav-in">
+  <a class="brand" href="#/">Malaysia Breach Claims Tracker</a>
+  <nav>
+    <a href="#/" data-r="">Overview</a>
+    <a href="#/forum" data-r="forum">Claimed breach</a>
+    <a href="#/ransomware" data-r="ransomware">Ransomware</a>
+    <a href="#/about" data-r="about">About</a>
+  </nav>
+</div></header>
+<div class="wrapw"><div class="warn">
+  <strong>Unverified claims.</strong> Everything here is claimed by threat actors. It has not been verified and may be
+  false, exaggerated, or outdated. Listing does not mean an organization was breached. This site hosts no leaked data.
+</div></div>
+<main id="app">Loading…</main>
+<footer>
+  <div id="updated"></div>
+  Ransomware listing data via <a href="https://www.ransomware.live/" rel="noopener noreferrer">ransomware.live</a>.
+  Organizations that want an entry corrected or removed: contact your-contact-email@example.com.
+</footer>
 
 <script>
-let entries = [];
+const $ = id => document.getElementById(id);
+const app = $("app");
+let DATA = {forum: [], ransomware: []};
+let VICT = null;
 
 function esc(s) {
   return String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 }
-
-function rowsFor(list, cells) {
-  return list.map(e => "<tr>" + cells(e).map(c => `<td>${esc(c)}</td>`).join("") + "</tr>").join("");
+function label(k) { return String(k).replace(/_/g, " ").replace(/^./, c => c.toUpperCase()); }
+function text(s) {
+  const t = String(s);
+  if (/^https?:\/\/\S+$/i.test(t))
+    return `<a href="${esc(t)}" target="_blank" rel="noopener noreferrer nofollow">${esc(t)}</a>`;
+  return esc(t).replace(/\n/g, "<br>");
+}
+function val(v) {
+  if (Array.isArray(v)) return v.map(x => `<div class="item">${val(x)}</div>`).join("");
+  if (v && typeof v === "object") return kv(v);
+  return text(v);
+}
+function kv(o) {
+  return `<table class="kv">` + Object.entries(o).map(([k, v]) =>
+    `<tr><th>${esc(label(k))}</th><td>${val(v)}</td></tr>`).join("") + `</table>`;
 }
 
-function render() {
-  const q = document.getElementById("q").value.toLowerCase();
-  const match = e => Object.values(e).join(" ").toLowerCase().includes(q);
+function rTable(list) {
+  return `<table><thead><tr><th>Date</th><th>Victim</th><th>Group</th><th>Website</th></tr></thead><tbody>` +
+    list.map(v => `<tr><td>${esc(v.date)}</td><td><a href="#/ransomware/${esc(v.id)}">${esc(v.name)}</a></td>` +
+      `<td>${esc(v.group)}</td><td>${esc(v.website)}</td></tr>`).join("") + `</tbody></table>`;
+}
+function fTable(list) {
+  return `<table><thead><tr><th>First seen</th><th>Claim</th><th>Type</th><th>Claimed data</th><th>Records</th></tr></thead><tbody>` +
+    list.map(e => `<tr><td>${esc(e.first_seen)}</td><td>${esc(e.company)}</td><td>${esc(e.claim_type)}</td>` +
+      `<td>${esc(e.data_types)}</td><td>${esc(e.records_claimed)}</td></tr>`).join("") + `</tbody></table>`;
+}
 
-  const forum = entries.filter(e => e.source !== "ransomware.live").filter(match);
-  const ransom = entries.filter(e => e.source === "ransomware.live").filter(match);
+function viewHome() {
+  const f = DATA.forum, r = DATA.ransomware;
+  app.innerHTML = `<h1>Overview</h1>
+    <div class="stats">
+      <div class="stat"><b>${r.length}</b><span>Ransomware victims</span></div>
+      <div class="stat"><b>${f.length}</b><span>Claimed breaches</span></div>
+    </div>
+    <h2>Latest ransomware listings</h2><div class="wrap">${r.length ? rTable(r.slice(0, 5)) : '<div class="empty">No entries.</div>'}</div>
+    <p><a href="#/ransomware">See all ransomware victims →</a></p>
+    <h2>Latest claimed breaches</h2><div class="wrap">${f.length ? fTable(f.slice(0, 5)) : '<div class="empty">No entries.</div>'}</div>
+    <p><a href="#/forum">See all claimed breaches →</a></p>`;
+}
 
-  document.getElementById("forum-rows").innerHTML =
-    rowsFor(forum, e => [e.first_seen, e.company, e.claim_type, e.data_types, e.records_claimed]);
-  document.getElementById("ransom-rows").innerHTML =
-    rowsFor(ransom, e => [e.first_seen, e.company, e.group, e.data_types, e.records_claimed]);
+function viewForum() {
+  app.innerHTML = `<h1>Claimed breach <span class="count">${DATA.forum.length}</span></h1>
+    <p class="sub">Claims posted on an underground forum.</p>
+    <div class="filters"><input id="fq" type="search" placeholder="Filter…"></div>
+    <div class="wrap" id="ftable"></div>`;
+  const draw = () => {
+    const q = $("fq").value.toLowerCase();
+    const list = DATA.forum.filter(e => !q || Object.values(e).join(" ").toLowerCase().includes(q));
+    $("ftable").innerHTML = list.length ? fTable(list) : '<div class="empty">No entries match.</div>';
+  };
+  $("fq").addEventListener("input", draw);
+  draw();
+}
 
-  document.getElementById("forum-count").textContent = forum.length;
-  document.getElementById("ransom-count").textContent = ransom.length;
-  document.getElementById("forum-empty").hidden = forum.length > 0;
-  document.getElementById("ransom-empty").hidden = ransom.length > 0;
+function viewRansom() {
+  const groups = [...new Set(DATA.ransomware.map(v => v.group).filter(Boolean))].sort();
+  app.innerHTML = `<h1>Ransomware <span class="count" id="rc"></span></h1>
+    <p class="sub">Malaysian victims listed on ransomware group leak sites. Select a victim for details.</p>
+    <div class="filters">
+      <input id="rq" type="search" placeholder="Search victim, group, website…">
+      <select id="rg"><option value="">All groups</option>${groups.map(g => `<option>${esc(g)}</option>`).join("")}</select>
+    </div>
+    <div class="wrap" id="rtable"></div>
+    <button class="btn" id="more" hidden>Show more</button>`;
+  let limit = 50;
+  const draw = () => {
+    const q = $("rq").value.toLowerCase(), g = $("rg").value;
+    const list = DATA.ransomware.filter(v =>
+      (!g || v.group === g) && (!q || [v.name, v.group, v.website].join(" ").toLowerCase().includes(q)));
+    $("rc").textContent = list.length;
+    $("rtable").innerHTML = list.length ? rTable(list.slice(0, limit)) : '<div class="empty">No entries match.</div>';
+    $("more").hidden = list.length <= limit;
+  };
+  $("rq").addEventListener("input", () => { limit = 50; draw(); });
+  $("rg").addEventListener("change", () => { limit = 50; draw(); });
+  $("more").addEventListener("click", () => { limit += 50; draw(); });
+  draw();
+}
+
+async function viewVictim(id) {
+  const v = DATA.ransomware.find(x => x.id === id);
+  if (!v) { viewRansom(); return; }
+  app.innerHTML = `<p><a href="#/ransomware">← All ransomware victims</a></p>
+    <h1>${esc(v.name)}</h1>
+    <p><span class="chip">${esc(v.group || "Unknown group")}</span> &nbsp; Discovered: ${esc(v.date)}
+       ${v.website ? " &nbsp; Website: " + esc(v.website) : ""}</p>
+    <p class="sub">Listed by the ransomware group above. This is the group's claim and has not been verified.</p>
+    <div id="vd">Loading details…</div>`;
+  if (!VICT) {
+    try { VICT = await (await fetch("victims.json", {cache: "no-store"})).json(); } catch (e) { VICT = {}; }
+  }
+  if (!location.hash.endsWith(id)) return;
+  const d = VICT[id];
+  let html = "";
+  if (d && d.description) html += `<h2>Description</h2><p>${text(d.description)}</p>`;
+  if (d && d.data && Object.keys(d.data).length) html += `<h2>Details</h2>${kv(d.data)}`;
+  $("vd").innerHTML = html || '<div class="empty">No further details available.</div>';
+}
+
+function viewAbout() {
+  app.innerHTML = `<h1>About</h1>
+    <p>This site tracks claims about Malaysian organizations from two kinds of sources:</p>
+    <p><strong>Claimed breach</strong>: posts on an underground forum where someone claims to hold or sell data.
+       <strong>Ransomware</strong>: victims listed on the leak sites of ransomware groups, via ransomware.live.</p>
+    <p>All entries are claims by criminals. They are not confirmed breaches. No leaked data, download links, or
+       personal information is published here.</p>
+    <p>Organizations that want an entry corrected or removed can use the contact address in the page footer.</p>`;
+}
+
+function route() {
+  const parts = location.hash.replace(/^#\/?/, "").split("/");
+  const a = parts[0] || "", b = parts[1] || "";
+  document.querySelectorAll("nav a").forEach(el => el.classList.toggle("on", el.dataset.r === a));
+  if (a === "forum") viewForum();
+  else if (a === "ransomware" && /^[0-9a-f]{12}$/.test(b)) viewVictim(b);
+  else if (a === "ransomware") viewRansom();
+  else if (a === "about") viewAbout();
+  else viewHome();
+  window.scrollTo(0, 0);
 }
 
 fetch("data.json", {cache: "no-store"})
   .then(r => r.json())
   .then(d => {
-    entries = d.entries || [];
-    document.getElementById("updated").textContent =
-      "Last updated: " + (d.generated_at || "").replace("T", " ").slice(0, 16) + " UTC";
-    render();
+    DATA = {forum: d.forum || [], ransomware: d.ransomware || []};
+    $("updated").textContent = "Last updated: " + (d.generated_at || "").replace("T", " ").slice(0, 16) + " UTC";
+    route();
   })
-  .catch(() => { document.getElementById("updated").textContent = "Could not load data."; });
-
-document.getElementById("q").addEventListener("input", render);
+  .catch(() => { app.textContent = "Could not load data."; });
+window.addEventListener("hashchange", route);
 </script>
 </body>
 </html>
