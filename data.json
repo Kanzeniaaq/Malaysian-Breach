@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-11-13T02:12:03+00:00",
+  "entries": [
+    {
+      "company": "Mah Sing Group Berhad",
+      "claim_type": "Database leak",
+      "data_types": "Data",
+      "records_claimed": "45gb",
+      "first_seen": "2026-11-13"
+    },
+    {
+      "company": "Malaysia Citizens",
+      "claim_type": "Database leak",
+      "data_types": "Phone Numbers",
+      "records_claimed": "",
+      "first_seen": "2026-11-13"
+    },
+    {
+      "company": "Vinasia",
+      "claim_type": "Database leak",
+      "data_types": "Data",
+      "records_claimed": "",
+      "first_seen": "2026-11-13"
+    },
+    {
+      "company": "",
+      "claim_type": "database leak",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-11-13"
+    },
+    {
+      "company": "Bank Rakyat",
+      "claim_type": "Database leak",
+      "data_types": "Data",
+      "records_claimed": "2GB",
+      "first_seen": "2026-11-13"
+    },
+    {
+      "company": "Critical 0 Day",
+      "claim_type": "Database leak",
+      "data_types": "Data",
+      "records_claimed": "",
+      "first_seen": "2026-11-13"
+    }
+  ]
+}
