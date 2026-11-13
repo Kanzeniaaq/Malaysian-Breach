@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T04:20:15+00:00",
+  "generated_at": "2026-11-13T07:34:20+00:00",
   "entries": [
     {
       "company": "Mah Sing Group Berhad",
@@ -171,6 +171,573 @@
       "first_seen": "2026-10-18",
       "source": "ransomware.live",
       "group": "qilin"
+    },
+    {
+      "company": "ock.com.my",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-10-17",
+      "source": "ransomware.live",
+      "group": "lockbit5"
+    },
+    {
+      "company": "YYC Advisors",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-10-13",
+      "source": "ransomware.live",
+      "group": "HYFLOCK"
+    },
+    {
+      "company": "Alfameli Group",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-10-13",
+      "source": "ransomware.live",
+      "group": "Orova"
+    },
+    {
+      "company": "ikhasas.com",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-10-05",
+      "source": "ransomware.live",
+      "group": "safepay"
+    },
+    {
+      "company": "Royal Selangor",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-10-05",
+      "source": "ransomware.live",
+      "group": "BYOD"
+    },
+    {
+      "company": "Main Place Mall",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-10-02",
+      "source": "ransomware.live",
+      "group": "netrunner"
+    },
+    {
+      "company": "Port of Tanjung Pelepas",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-09-11",
+      "source": "ransomware.live",
+      "group": "direwolf"
+    },
+    {
+      "company": "myglobal.com",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-09-03",
+      "source": "ransomware.live",
+      "group": "incransom"
+    },
+    {
+      "company": "EP Manufacturing Bhd",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-08-31",
+      "source": "ransomware.live",
+      "group": "thegentlemen"
+    },
+    {
+      "company": "cimbsecurities.com",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-08-31",
+      "source": "ransomware.live",
+      "group": "incransom"
+    },
+    {
+      "company": "CareClinics",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-08-29",
+      "source": "ransomware.live",
+      "group": "qilin"
+    },
+    {
+      "company": "KenEp Resources",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-08-26",
+      "source": "ransomware.live",
+      "group": "qilin"
+    },
+    {
+      "company": "PCA Group Sdn. Bhd.",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-08-25",
+      "source": "ransomware.live",
+      "group": "Majinahanashi"
+    },
+    {
+      "company": "SD Associates Sdn Bhd",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-08-18",
+      "source": "ransomware.live",
+      "group": "incransom"
+    },
+    {
+      "company": "Desatera Sdn Bhd",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-08-16",
+      "source": "ransomware.live",
+      "group": "qilin"
+    },
+    {
+      "company": "The Coffee Bean",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-08-14",
+      "source": "ransomware.live",
+      "group": "thegentlemen"
+    },
+    {
+      "company": "Malaysian Nuclear Agency",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-07-30",
+      "source": "ransomware.live",
+      "group": "thegentlemen"
+    },
+    {
+      "company": "Tong Kong E & E Sdn Bhd (95907X)",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-07-29",
+      "source": "ransomware.live",
+      "group": "Black X"
+    },
+    {
+      "company": "Weilhotel",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-07-29",
+      "source": "ransomware.live",
+      "group": "gunra"
+    },
+    {
+      "company": "Furama Bukit Bintang",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-07-27",
+      "source": "ransomware.live",
+      "group": "nightspire"
+    },
+    {
+      "company": "Sunway Berhad",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-07-23",
+      "source": "ransomware.live",
+      "group": "qilin"
+    },
+    {
+      "company": "rehabmalaysia.com",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-07-17",
+      "source": "ransomware.live",
+      "group": "krybit"
+    },
+    {
+      "company": "Perpustam",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-07-14",
+      "source": "ransomware.live",
+      "group": "arcusmedia"
+    },
+    {
+      "company": "Quanterm Logistics Sdn Bhd",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-07-07",
+      "source": "ransomware.live",
+      "group": "thegentlemen"
+    },
+    {
+      "company": "majuhome.com.my",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-07-03",
+      "source": "ransomware.live",
+      "group": "krybit"
+    },
+    {
+      "company": "SGS Malaysia",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-06-20",
+      "source": "ransomware.live",
+      "group": "thegentlemen"
+    },
+    {
+      "company": "THL PROJECT MANAGEMENT SDN. BHD.",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-06-18",
+      "source": "ransomware.live",
+      "group": "qilin"
+    },
+    {
+      "company": "Kedah",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-06-16",
+      "source": "ransomware.live",
+      "group": "nova"
+    },
+    {
+      "company": "myipo.gov.my",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-06-13",
+      "source": "ransomware.live",
+      "group": "payload"
+    },
+    {
+      "company": "mlit.com.my",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-06-12",
+      "source": "ransomware.live",
+      "group": "stormous"
+    },
+    {
+      "company": "UiTM Holdings",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-06-11",
+      "source": "ransomware.live",
+      "group": "thegentlemen"
+    },
+    {
+      "company": "Villea Hotels in AttanaHotels",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-06-08",
+      "source": "ransomware.live",
+      "group": "payload"
+    },
+    {
+      "company": "Shanpoornam Metals",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-05-29",
+      "source": "ransomware.live",
+      "group": "lamashtu"
+    },
+    {
+      "company": "MSC Group",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-05-18",
+      "source": "ransomware.live",
+      "group": "lamashtu"
+    },
+    {
+      "company": "Majlis Perbandaran Alor Gajah",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-05-17",
+      "source": "ransomware.live",
+      "group": "qilin"
+    },
+    {
+      "company": "PNSB Insurance Brokers Sdn Bhd",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-05-17",
+      "source": "ransomware.live",
+      "group": "qilin"
+    },
+    {
+      "company": "Inteceng.com.my (+ Tsksynergy.com.my + Amemanufacturing.com.my + Woodnova.com.my)",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-05-13",
+      "source": "ransomware.live",
+      "group": "payload"
+    },
+    {
+      "company": "Keretapi Tanah",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-05-06",
+      "source": "ransomware.live",
+      "group": "thegentlemen"
+    },
+    {
+      "company": "Elken Sdn Bhd",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-05-05",
+      "source": "ransomware.live",
+      "group": "medusalocker"
+    },
+    {
+      "company": "whessoe.com.my",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-04-27",
+      "source": "ransomware.live",
+      "group": "apt73"
+    },
+    {
+      "company": "olpro.com.my",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-04-27",
+      "source": "ransomware.live",
+      "group": "apt73"
+    },
+    {
+      "company": "Malaysian NPK Fertilizer Sdn. Bhd",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-04-25",
+      "source": "ransomware.live",
+      "group": "lamashtu"
+    },
+    {
+      "company": "Jesin Group",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-04-20",
+      "source": "ransomware.live",
+      "group": "lamashtu"
+    },
+    {
+      "company": "Jati Tinggi",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-04-19",
+      "source": "ransomware.live",
+      "group": "thegentlemen"
+    },
+    {
+      "company": "favellefavco.com",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-04-17",
+      "source": "ransomware.live",
+      "group": "safepay"
+    },
+    {
+      "company": "International Assistance Sdn",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-04-13",
+      "source": "ransomware.live",
+      "group": "lamashtu"
+    },
+    {
+      "company": "Kerjaya Prospek Group",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-03-27",
+      "source": "ransomware.live",
+      "group": "qilin"
+    },
+    {
+      "company": "Golden Clay Industries Sdn Bhd",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-03-04",
+      "source": "ransomware.live",
+      "group": "qilin"
+    },
+    {
+      "company": "Lam Soon Group",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-03-03",
+      "source": "ransomware.live",
+      "group": "qilin"
+    },
+    {
+      "company": "Omesti Berhad",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-03-03",
+      "source": "ransomware.live",
+      "group": "qilin"
+    },
+    {
+      "company": "PLUS Malaysia Berhad",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-03-01",
+      "source": "ransomware.live",
+      "group": "qilin"
+    },
+    {
+      "company": "Malaysia Airlines",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-02-26",
+      "source": "ransomware.live",
+      "group": "qilin"
+    },
+    {
+      "company": "WCT Holdings Berhad",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-02-11",
+      "source": "ransomware.live",
+      "group": "thegentlemen"
+    },
+    {
+      "company": "PLUS Malaysia Berhad",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-02-06",
+      "source": "ransomware.live",
+      "group": "thegentlemen"
+    },
+    {
+      "company": "WRP Asia Pacific Sdn Bhd",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-01-20",
+      "source": "ransomware.live",
+      "group": "thegentlemen"
+    },
+    {
+      "company": "Kontena Nasional Berhad",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-01-20",
+      "source": "ransomware.live",
+      "group": "qilin"
+    },
+    {
+      "company": "Kontena Nasional Berhad",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-01-20",
+      "source": "ransomware.live",
+      "group": "thegentlemen"
+    },
+    {
+      "company": "Perdana Petroleum Berhad",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-01-13",
+      "source": "ransomware.live",
+      "group": "direwolf"
+    },
+    {
+      "company": "Chemsain Konsultant Sdn Bhd",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-01-13",
+      "source": "ransomware.live",
+      "group": "direwolf"
+    },
+    {
+      "company": "REDtone",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-01-11",
+      "source": "ransomware.live",
+      "group": "obscura"
+    },
+    {
+      "company": "PTS Goldkist Industries Sdn Bhd",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-01-08",
+      "source": "ransomware.live",
+      "group": "qilin"
+    },
+    {
+      "company": "Bina Darulaman Berhad",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-01-04",
+      "source": "ransomware.live",
+      "group": "direwolf"
+    },
+    {
+      "company": "Sunzen Biotech Berhad",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-01-04",
+      "source": "ransomware.live",
+      "group": "direwolf"
     }
   ]
 }
