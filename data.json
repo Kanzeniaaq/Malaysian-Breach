@@ -1,47 +1,176 @@
 {
-  "generated_at": "2026-11-13T02:12:03+00:00",
+  "generated_at": "2026-11-13T04:14:01+00:00",
   "entries": [
     {
       "company": "Mah Sing Group Berhad",
       "claim_type": "Database leak",
       "data_types": "Data",
       "records_claimed": "45gb",
-      "first_seen": "2026-11-13"
+      "first_seen": "2026-11-13",
+      "source": "Underground forum",
+      "group": ""
     },
     {
       "company": "Malaysia Citizens",
       "claim_type": "Database leak",
       "data_types": "Phone Numbers",
       "records_claimed": "",
-      "first_seen": "2026-11-13"
+      "first_seen": "2026-11-13",
+      "source": "Underground forum",
+      "group": ""
     },
     {
       "company": "Vinasia",
       "claim_type": "Database leak",
       "data_types": "Data",
       "records_claimed": "",
-      "first_seen": "2026-11-13"
+      "first_seen": "2026-11-13",
+      "source": "Underground forum",
+      "group": ""
     },
     {
       "company": "",
       "claim_type": "database leak",
       "data_types": "",
       "records_claimed": "",
-      "first_seen": "2026-11-13"
+      "first_seen": "2026-11-13",
+      "source": "Underground forum",
+      "group": ""
     },
     {
       "company": "Bank Rakyat",
       "claim_type": "Database leak",
       "data_types": "Data",
       "records_claimed": "2GB",
-      "first_seen": "2026-11-13"
+      "first_seen": "2026-11-13",
+      "source": "Underground forum",
+      "group": ""
     },
     {
       "company": "Critical 0 Day",
       "claim_type": "Database leak",
       "data_types": "Data",
       "records_claimed": "",
-      "first_seen": "2026-11-13"
+      "first_seen": "2026-11-13",
+      "source": "Underground forum",
+      "group": ""
+    },
+    {
+      "company": "Ministry of Health Malaysia",
+      "claim_type": "Ransomware listing",
+      "data_types": "Data",
+      "records_claimed": "",
+      "first_seen": "2026-11-12",
+      "source": "ransomware.live",
+      "group": "Panzer"
+    },
+    {
+      "company": "Bright Property Service",
+      "claim_type": "Ransomware listing",
+      "data_types": "Data",
+      "records_claimed": "",
+      "first_seen": "2026-11-03",
+      "source": "ransomware.live",
+      "group": "Orova"
+    },
+    {
+      "company": "MARDEC Berhad",
+      "claim_type": "Ransomware listing",
+      "data_types": "Data",
+      "records_claimed": "",
+      "first_seen": "2026-11-03",
+      "source": "ransomware.live",
+      "group": "Orova"
+    },
+    {
+      "company": "Astino Berhad",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-11-02",
+      "source": "ransomware.live",
+      "group": "qilin"
+    },
+    {
+      "company": "Digital Triumph",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-10-31",
+      "source": "ransomware.live",
+      "group": "N0n"
+    },
+    {
+      "company": "INTI International University & Colleges",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-10-30",
+      "source": "ransomware.live",
+      "group": "rhysida"
+    },
+    {
+      "company": "Antah HealthCare Group",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-10-27",
+      "source": "ransomware.live",
+      "group": "crypto24"
+    },
+    {
+      "company": "MISC Group",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-10-26",
+      "source": "ransomware.live",
+      "group": "rhysida"
+    },
+    {
+      "company": "mahsing.com.my",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-10-26",
+      "source": "ransomware.live",
+      "group": "Scarlettgroup"
+    },
+    {
+      "company": "mainplace.com.my",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-10-24",
+      "source": "ransomware.live",
+      "group": "krybit"
+    },
+    {
+      "company": "Wah Chan Consolidated Sdn Bhd",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-10-23",
+      "source": "ransomware.live",
+      "group": "Orova"
+    },
+    {
+      "company": "GSE-M Technology Sdn. Bhd.",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-10-21",
+      "source": "ransomware.live",
+      "group": "bravox"
+    },
+    {
+      "company": "Pengurusan Aset Air Berhad",
+      "claim_type": "Ransomware listing",
+      "data_types": "",
+      "records_claimed": "",
+      "first_seen": "2026-10-18",
+      "source": "ransomware.live",
+      "group": "qilin"
     }
   ]
 }

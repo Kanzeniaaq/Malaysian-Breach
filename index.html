@@ -39,7 +39,7 @@
   <div class="wrap">
     <table>
       <thead>
-        <tr><th>First seen</th><th>Organization</th><th>Claim type</th><th>Claimed data</th><th>Claimed records</th></tr>
+        <tr><th>First seen</th><th>Organization</th><th>Claim type</th><th>Claimed data</th><th>Claimed records</th><th>Source</th></tr>
       </thead>
       <tbody id="rows"></tbody>
     </table>
@@ -47,7 +47,7 @@
   </div>
 
   <footer>
-    Organizations that want an entry corrected or removed: contact [YOUR CONTACT EMAIL HERE].
+    Ransomware listing data via <a href="https://www.ransomware.live/">ransomware.live</a>. Organizations that want an entry corrected or removed: contact [YOUR CONTACT EMAIL HERE].
   </footer>
 </main>
 
@@ -63,7 +63,8 @@ function render() {
   const shown = entries.filter(e => Object.values(e).join(" ").toLowerCase().includes(q));
   document.getElementById("rows").innerHTML = shown.map(e =>
     `<tr><td>${esc(e.first_seen)}</td><td>${esc(e.company)}</td><td>${esc(e.claim_type)}</td>` +
-    `<td>${esc(e.data_types)}</td><td>${esc(e.records_claimed)}</td></tr>`
+    `<td>${esc(e.data_types)}</td><td>${esc(e.records_claimed)}</td>` +
+    `<td>${esc(e.source)}${e.group ? " (" + esc(e.group) + ")" : ""}</td></tr>`
   ).join("");
   document.getElementById("empty").hidden = shown.length > 0;
 }
